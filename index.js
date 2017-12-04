@@ -47,7 +47,7 @@ function createDao(daoProjectId, entityName) {
         projectId
     });
 
-    function list(limit, order, token) {
+    function listBy(filters, limit, order, token) {
         return new Promise((resolve, reject) => {
             const q = ds.createQuery([entityName]);
 
@@ -57,6 +57,12 @@ function createDao(daoProjectId, entityName) {
 
             if (order) {
                 q.order(order);
+            }
+
+            if (filters && Array.isArray(filters) && filters.length > 0) {
+                for (const filter of filters) {
+                    q.filter.apply(q, filter);
+                }
             }
 
             if (token) {
@@ -78,6 +84,10 @@ function createDao(daoProjectId, entityName) {
                 });
             });
         });
+    }
+
+    function list(limit, order, token) {
+        return listBy(null, limit, order, token);
     }
 
     function update(id, data) {
@@ -150,7 +160,8 @@ function createDao(daoProjectId, entityName) {
         read,
         update,
         delete: _delete,
-        list
+        list,
+        listBy,
     };
 }
 

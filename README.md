@@ -87,6 +87,22 @@ testDao.list(10, 'test').then(({ data, hasMore }) => {
 });
 ```
 
+### Listing entities with filters applied
+
+```js
+const { setup, createDao } = require('google-cloud-datastore-node');
+
+const testDao = createDao('Test');
+
+/* parameters are `filters`, `limit`, `order`, `token` */
+testDao.listBy([
+    ['location', 'CA']
+], 10, 'test').then(({ data, hasMore }) => {
+    /* `hasMore` can be re-used as a `token` param in case of pagination implementation */
+    console.log(data);
+});
+```
+
 ## Additional information
 
 * [Deploying Google Cloud Functions in 5 easy steps](https://medium.com/@viatsko/deploying-google-cloud-functions-in-5-easy-steps-21f6d837c6bb)
