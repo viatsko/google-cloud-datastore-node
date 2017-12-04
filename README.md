@@ -86,3 +86,7 @@ testDao.list(10, 'test').then(({ data, hasMore }) => {
     console.log(data);
 });
 ```
+
+## License
+
+[MIT](./LICENSE)
