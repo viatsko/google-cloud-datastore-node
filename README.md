@@ -7,6 +7,10 @@ Based on a code by Google https://github.com/GoogleCloudPlatform/nodejs-getting-
 The difference is that this library uses Promises instead of callbacks which leads to a better code organization
 and can be used as well with async/await.
 
+## Installation
+
+`yarn add google-cloud-datastore-node`
+
 ## Usage
 
 ### Setting up project id
