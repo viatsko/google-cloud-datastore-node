@@ -17,10 +17,11 @@ function toDatastore(obj, nonIndexed) {
         if (obj[k] === undefined) {
             return;
         }
+
         results.push({
             name: k,
             value: obj[k],
-            excludeFromIndexes: nonIndexed.indexOf(k) !== -1
+            excludeFromIndexes: nonIndexed.indexOf(k) !== -1,
         });
     });
 
