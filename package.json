@@ -1,6 +1,6 @@
 {
   "name": "google-cloud-datastore-node",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "NodeJS library to simplify working with Google Cloud DataStore",
   "main": "index.js",
   "repository": "git@github.com:viatsko/google-cloud-datastore-node.git",
