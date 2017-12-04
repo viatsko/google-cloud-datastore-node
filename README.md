@@ -87,6 +87,11 @@ testDao.list(10, 'test').then(({ data, hasMore }) => {
 });
 ```
 
+## Additional information
+
+* [Deploying Google Cloud Functions in 5 easy steps](https://medium.com/@viatsko/deploying-google-cloud-functions-in-5-easy-steps-21f6d837c6bb)
+* [Google Cloud Functions: Scheduling (Cron)](https://medium.com/@viatsko/google-cloud-functions-scheduling-cron-5657c2ae5212)
+
 ## License
 
 [MIT](./LICENSE)
